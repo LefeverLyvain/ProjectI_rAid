@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - rAid_DB@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="rAid_DB">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="mysql"/>
+    <schema id="4" name="performance_schema"/>
+    <table id="5" parent="1" name="boekCursus"/>
+    <column id="6" parent="5" name="ID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="7" parent="5" name="titelID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="8" parent="5" name="gebruikerID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="9" parent="5" name="startdatum">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="10" parent="5" name="einddatum">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="11" parent="5" name="gemiddeldeTijd">
+      <data-type>time|0</data-type>
+    </column>
+  </database-model>
+</dataSource>
