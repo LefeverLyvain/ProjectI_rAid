@@ -19,8 +19,12 @@ tijdStart = time.time()
 tijdstipStart = time.strftime("%Y-%m-%d %H:%M:%S", localtime())
 print(tijdstipStart)
 
-temp = DbClass()
-temp.setDataToDatabaseBoekCursus(tijdstipStart)
+boekCursusDB = DbClass('rAidDB')
+boekCursusDB.setDataToDatabaseBoekCursus(tijdstipStart, "2020-12-31 23:59:58")
+
+# Add books to DB
+# titelDB = DbClass('rAidDB')
+# titelDB.setDataToDatabaseBoekCursus('Game of Thrones')
 
 
 
