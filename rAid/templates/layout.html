@@ -1,0 +1,55 @@
+{#{% import 'macros/macro.html' as macro %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project I - {% block title %}{% endblock %}</title>
+{#	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">#}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{#	<meta name="description" content="rAid - Project I">#}
+{#	<meta name="author" content="Lyvain Lefever">#}
+{#	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">#}
+
+</head>
+<main>
+
+	    <header>
+		    <a href="index.html" id="logo"></a>
+
+		    <nav>
+			    <ul class="navigation">
+				    <li><a {% block home %}{% endblock %}href="{{ url_for("homepage") }}">Home</a></li>
+            	    <li><a {% block info %}{% endblock %}href="{{ url_for("info") }}">Info</a></li>
+            	    <li><a {% block about %}{% endblock %}href="{{ url_for("about") }}">About</a></li>
+			    </ul>
+		    </nav>
+	    </header>
+
+    <div class="width">
+    {% block main %}
+	{% endblock %}
+    </div>
+
+	<footer class="footer-distributed">
+        <div class="footer-left">
+		    <a href="{{ url_for("homepage") }}" id="footer-logo" class="footer-logo"></a>
+            <p class="footer-links">
+                <a href="{{ url_for("homepage") }}">Home</a>
+                <a href="{{ url_for("info") }}">Info</a>
+                <a href="{{ url_for("about") }}">About</a>
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <ul>
+				<li>Lyvain Lefever</li>
+				<li>lyvain.lyvain@student.howest.be</li>
+				<li>0499 19 97 82</li>
+			</ul>
+        </div>
+
+        <!--<p>Lyvain Lefever &copy; 2017</p>-->
+	</footer>
+
+</main>
+</html>
